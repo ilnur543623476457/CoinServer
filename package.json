@@ -1,0 +1,25 @@
+{
+  "name": "botcoin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev-tg": "nodemon index_bot.js",
+    "dev-server": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "surge": "^0.24.6",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.1"
+  }
+}
