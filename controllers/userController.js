@@ -1,5 +1,4 @@
 const {User, Translation, Sale, GPU, CPU, Mouse, GPUUser, CPUUser, MouseUser, TopOneLatereia, UserGamingLatereia, TimerGame, TopOneLatereiaTwo, UserGamingLatereiaTwo} = require('../models/models')
-const uuid  = require('uuid')
 const event = require('events')
 
 
@@ -51,8 +50,7 @@ class UserController {
             if (user){
                 return res.json(user)
             } else {
-                const refCode = uuid.v4().split('-')[0]
-                const user = await User.create({id_user, userName, meRefCode: refCode})
+                const user = await User.create({id_user, userName, meRefCode: id_user})
                 const AllGpu = await GPU.findAll()
                 for (let i = 0; i < AllGpu.length; i++) {
                     const element = AllGpu[i];
